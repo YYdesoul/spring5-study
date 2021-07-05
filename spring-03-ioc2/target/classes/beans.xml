@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.soul.pojo.User">
+        <property name="name" value="jack"/>
+        <property name="age" value="10"/>
+    </bean>
+
+    <bean id="user2" class="com.soul.pojo.User">
+        <constructor-arg index="0" value="David"/>
+        <constructor-arg index="1" value="20"/>
+    </bean>
+
+    <bean id="user3" class="com.soul.pojo.User">
+        <constructor-arg name="name" value="Anna"/>
+        <constructor-arg name="age" value="30"/>
+    </bean>
+
+    <!--别名-->
+    <alias name="user3" alias="userThree"/>
+</beans>

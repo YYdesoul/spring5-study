@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!--
+        相当于new一个对象
+        bean相当于一个对象
+        id相当于变量名
+        class相当于变量类型
+        property 相当于一个field
+        Note: 类必须要有set方法
+    -->
+    <bean id="user" class="com.soul.dao.MySqlDao"/>
+    <bean id="user2" class="com.soul.dao.OracleDao"/>
+
+
+    <bean id="userService" class="com.soul.service.UserServiceImpl">
+        <!--    如果要改变user的值，直接在配置文件这里改就可以了-->
+        <property name="userDao" ref="user2"/>
+    </bean>
+
+</beans>

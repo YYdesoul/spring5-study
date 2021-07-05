@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--导入约束 : xmlns:p="http://www.springframework.org/schema/p"-->
+    <!--P(属性: properties)命名空间 , 属性依然要设置set方法(用set)-->
+    <bean id="user" class="com.soul.pojo.User" p:name="David" p:age="18" scope="prototype"/>
+
+    <!--导入约束 : xmlns:c="http://www.springframework.org/schema/c"-->
+    <!--C(构造: Constructor)命名空间 , 属性依然要设置set方法-->
+    <bean id="user2" class="com.soul.pojo.User" c:name="Jack" c:age="28" scope="singleton"/>
+</beans>
