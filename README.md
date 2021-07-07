@@ -20,3 +20,15 @@ IOC的设计原型
 
 ## spring-07-appconfig
 使用Java配置类代替xml来配置Beans
+
+## spring-08-proxy
+代理模式（静态代理+动态代理）
+
+## spring-09-aop
+aop的实现
+
+## spring-10-mybatis
+spring整合MyBatis
+
+## spring-11-transaction
+spring事务

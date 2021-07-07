@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=???????mapper/Mapper??-->
+<mapper namespace="com.soul.mapper.UserMapper">
+    <!--id ?????-->
+    <select id="getUserList" resultType="com.soul.pojo.User">
+        select * from user;
+    </select>
+
+    <!--???????????-->
+    <insert id="addUser" parameterType="com.soul.pojo.User">
+        insert into user (id, name, pwd) values (#{id}, #{name}, #{pwd});
+    </insert>
+
+   <delete id="deleteById" parameterType="int">
+        delete from user where id = #{id}
+<!--        deletes from user where id = #{id} &lt;!&ndash; ???? &ndash;&gt;-->
+    </delete>
+</mapper>
